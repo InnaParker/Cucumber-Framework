@@ -27,7 +27,7 @@ public class LoginPage extends BaseClass {
 	public WebElement message;
 	
 
-	// Initializing instance all instance variables with constructor
+	// Initializing all instance variables with constructor
 
 	public LoginPage() {
 
