@@ -345,20 +345,12 @@ public class CommonMethods extends BaseClass{
  * @param fileName
  */
 	
-	public static String takeScreenshot(String fileName)
+	public static byte[] takeScreenshot()
 	{
-		TakesScreenshot ts=(TakesScreenshot)driver;
-		File scr=ts.getScreenshotAs(OutputType.FILE);
+		 TakesScreenshot ts=(TakesScreenshot)driver;
+		 byte[] screen = ts.getScreenshotAs(OutputType.BYTES);
 		
-		String dest=System.getProperty("user.dir")+"/target/screenshots/"+fileName+".png";
-		
-		try {
-			FileUtils.copyFile(scr, new File(dest));
-		} catch (IOException e) {
-					e.printStackTrace();
-					System.out.println("Unable to take screenshot");
-		}
-		return dest;
+		 return screen;
 		
 	}
 	

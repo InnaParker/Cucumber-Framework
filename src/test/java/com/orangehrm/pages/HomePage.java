@@ -8,7 +8,7 @@ import com.orangehrm.utils.BaseClass;
 
 public class HomePage extends BaseClass{
 	
-	@FindBy (xpath="li[text()='Dashboard']")
+	@FindBy (css="li[class='page-title']")
 	public WebElement dashboardText;
 	
 	@FindBy(partialLinkText="PIM")
